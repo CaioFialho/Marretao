@@ -17,6 +17,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    width: 100%;
     align-items: center;
 }
 
@@ -24,6 +25,13 @@ body {
 
 main {
     margin-top: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50vh;
+}
+
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,35 +41,71 @@ main {
 
 .titulo {
     background-image: url(images/wood.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    padding: 40px;
+    top: 14vh;
 }
 
 .titulo > h1 {
     font-size: 3rem;
     font-family: chalk, Arial, Helvetica, sans-serif;
     color: white;
-    
 }
 
 .opicoes {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 30vh;
+    justify-content: center;
+    height: 60vh;
+    width: 50vw;
     
     background-image: url(images/paper.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-.opicoes > a {
-    background-color: rgb(216, 48, 90);
-    padding: 20px;
+.button {
+    display: flex;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.button > a {
     text-align: center;
-    font-size: 1.6rem;
-    border-radius: 10px;
-    border: solid 2PX rgb(92, 2, 20);
+    font-size: 1.8rem;
     color: black;
+    background-image: url(images/wood.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 10px 42px;
+    font-family: chalk, Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#play {
+    margin: 30px 0;
+    transform: rotate(5deg);
+    transition: 0.3s;
+}
+
+#play:hover {
+    transform: scale(1.2);
+}
+
+#regras {
+    transform: rotate(-5deg);
+    transition: 0.3s;
+}
+
+#regras:hover {
+    transform: scale(1.2);
 }
 
 footer {
@@ -70,9 +114,13 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    color: white;
+    color: rgb(209, 190, 190);
 }
 
 footer > p > a {
     color: crimson;
+}
+
+footer > p > a:hover {
+    color: white;
 }
